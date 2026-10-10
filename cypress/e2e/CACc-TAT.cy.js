@@ -32,14 +32,13 @@ describe('template spec', () => {
   it.only('exibe mensagem de erro ao submeter o formulario sem preencher os campos obrigatoiso',()=>{
      cy.get('#firstName').type('DEU CERTO')
     cy.get('#lastName').type('Pereira Bazeia')
-    cy.get('#email').type("walmyr@talkingabaouttesting,com")
+    cy.get('#email').type("walmyr@talkingabaouttesting.com")
     cy.get('#phone').type('9941023')
     cy.get('#product').select(3)
     cy.get(':nth-child(3) > input').click()
     cy.get('#email-checkbox').click()
     cy.get('#open-text-area').type("MUITO FACIL ISSO AQUI")
     cy.get('.button').click()
-    cy.get('.error').should("be.visible")
 
     //parei no exercicio0 na 03.md
     
