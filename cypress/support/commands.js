@@ -1,7 +1,7 @@
 Cypress.Commands.add('fillMandatoryFieldsAndSubmit', () => {
     cy.get('#firstName').type('DEU CERTO')
     cy.get('#lastName').type('Pereira Bazeia')
-    cy.get('#email').type("walmyr@talkingabaouttesting.com")
+    cy.get('#email').type("walmyr@talkingabaouttesting,com")
     cy.get('#phone').type('9941023')
     cy.get('#product').select(3)
     cy.get(':nth-child(3) > input').click()
